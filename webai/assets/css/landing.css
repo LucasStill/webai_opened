@@ -1,0 +1,287 @@
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../fonts/Montserrat/static/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Black";
+    src: url("../fonts/Montserrat/static/Montserrat-Black.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url("../fonts/Montserrat/static/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-ExtraLight";
+    src: url("../fonts/Montserrat/static/Montserrat-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Thin";
+    src: url("../fonts/Montserrat/static/Montserrat-Thin.ttf");
+}
+
+
+body {
+    margin: 0;
+    background-color: #03071e;
+    font-family: "Montserrat-Light";
+    color: #ffba08;
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.navbar {
+    height: 75px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.main_header .top_shape {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+.top_shape_img {
+    height: 100%;
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cub1_img {
+    margin: auto;
+    position: absolute;
+    z-index: -1;
+    right: 300px;
+    top: 75px;
+    height: 140%;
+}
+
+.cub1 {
+    margin: auto;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+}
+
+
+.main_header {
+    height: 600px;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    margin: auto auto 50px;
+}
+
+
+.main_header .title_container {
+    display: block;
+    margin: auto auto auto 0;
+    padding-left: 20px;
+}
+
+.title_container h1 {
+    font-size: 140px;
+    margin-bottom: 0;
+}
+
+.title_container h2 {
+    font-size: 50px;
+    margin-top: 0;
+    max-width: 500px;
+}
+
+.title_container p {
+    max-width: 700px;
+    font-size: 20px;
+}
+
+.container {
+    margin-bottom: 150px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    width: 100%;
+}
+
+.container .section {
+    max-width: 1000px;
+    margin: auto;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section p {
+    color: white;
+    font-size: 22px;
+}
+
+.section .sub_explanation {
+    font-family: Montserrat-ExtraLight;
+    font-size: 18px;
+    color: #f48c06;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.section h2 {
+    color: #ffba08;
+    font-size: 32px;
+}
+
+.section .listing {
+    display: block;
+}
+
+.listing p {
+    font-family: Montserrat-ExtraLight;
+    font-size: 22px;
+    color: #faa307;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.webai_script_link {
+    background-color: #6a040f;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.section .click_to_copy {
+    color: lightgray;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+.footer {
+    bottom: 0;
+}
+
+.anim_landscape {
+    margin: auto;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    margin-top: 500px;
+}
+
+
+.step_container {
+    margin: auto;
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    column-gap: 20px;
+    grid-template-areas: "step step step";
+}
+
+
+table {
+    column-gap: 20px;
+    border: 2px solid;
+    text-align: center;
+}
+
+table td {
+    border: 1px solid;
+}
+
+
+@media screen and (min-width: 700px) {
+    .cub1_holder {
+        left: -200px;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+}
+
+@media screen and (max-width: 700px) {
+    .title_container h1 {
+        font-size: 90px;
+        text-shadow: 1px 1px #03071e;
+
+    }
+
+    .title_container h2 {
+        font-size: 40px;
+        text-shadow: 2px 2px #03071e;
+    }
+
+    .title_container p {
+        background-color: #03071e;
+        opacity: 90%;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .cub1_holder {
+        left: 0;
+    }
+
+    .cub1_img {
+        right: 200px !important;
+        width: auto;
+        position: absolute;
+    }
+
+    .top_shape_img {
+        width: auto;
+    }
+
+    .step_container {
+        grid-template-areas: "step";
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title_container h1 {
+        font-size: 70px;
+    }
+
+    .title_container h2 {
+        font-size: 30px;
+    }
+
+    .webai_script_link {
+        font-size: 14px !important;
+    }
+
+    .cub1_holder {
+        /*left: 100px;*/
+    }
+
+    .cub1_img {
+        right: 0!important;
+        height: 100%;
+
+    }
+
+
+
+}

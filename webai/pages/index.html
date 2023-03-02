@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body style="height: 100%;">
+<h1>WebAI</h1>
+
+<p id="time_tracker">time tracker=</p>
+<p id="interval_mov">interval=</p>
+<p id="x">x=</p>
+<p id="y">y=</p>
+<p id="tracker_touchmove">touchmove=</p>
+<p id="tracker_touchrest">touchrest=</p>
+
+<label>
+    <input type="password">
+</label>
+
+<button onclick="update_webAI()">Update WebAI</button>
+
+<div style="width: 100%; height: 2000px; background-color: cornflowerblue;" about="written content stuff">
+
+    <!-- Here we test whether adding a new mouse click is compatible with the one added on the div from the script
+     We can observe that when clicking on the div below it does log in the console and also trigger the added webAI event -->
+    <div style="width: 100px; height: 100px; background-color: lightseagreen;" onclick="console.log('got div click')">
+
+    </div>
+
+
+    <!-- Paragraph test to test the behavior of an element hover data obtained
+    We can observe that padding is taken into consideration in the hover trigger event.
+    Thus in the processing task we need to take that into account as well.
+    -->
+    <p style="padding-top: 100px;">
+        Fac ergo, mi Lucili, quod facere te scribis, omnes horas complectere; sic fiet ut minus ex crastino pendeas, si hodierno manum inieceris. Dum differtur vita transcurrit. Omnia, Lucili, aliena sunt, tempus tantum nostrum est; in huius rei unius fugacis ac lubricae possessionem natura nos misit, ex qua expellit quicumque vult. Et tanta stultitia mortalium est ut quae minima et vilissima sunt, certe reparabilia, imputari sibi cum impetravere patiantur, nemo se iudicet quicquam debere qui tempus accepit, cum interim hoc unum est quod ne gratus quidem potest reddere. Interrogabis fortasse quid ego faciam qui tibi ista praecipio. Fatebor ingenue: quod apud luxuriosum sed diligentem evenit, ratio mihi constat impensae. Non possum dicere nihil perdere, sed quid perdam et quare et quemadmodum dicam; causas paupertatis meae reddam. Sed evenit mihi quod plerisque non suo vitio ad inopiam redactis: omnes ignoscunt, nemo succurrit. Quid ergo est? non puto pauperem cui quantulumcumque superest sat est; tu tamen malo serves tua, et bono tempore incipies. Nam ut visum est maioribus nostris, 'sera parsimonia in fundo est'; non enim tantum minimum in imo sed pessimum remanet. Vale.
+    </p>
+
+    <!-- Paragraph test to test the behavior of an element hover data obtained-->
+    <p>
+       2 Fac ergo, mi Lucili, quod facere te scribis, omnes horas complectere; sic fiet ut minus ex crastino pendeas, si hodierno manum inieceris. Dum differtur vita transcurrit. Omnia, Lucili, aliena sunt, tempus tantum nostrum est; in huius rei unius fugacis ac lubricae possessionem natura nos misit, ex qua expellit quicumque vult. Et tanta stultitia mortalium est ut quae minima et vilissima sunt, certe reparabilia, imputari sibi cum impetravere patiantur, nemo se iudicet quicquam debere qui tempus accepit, cum interim hoc unum est quod ne gratus quidem potest reddere. Interrogabis fortasse quid ego faciam qui tibi ista praecipio. Fatebor ingenue: quod apud luxuriosum sed diligentem evenit, ratio mihi constat impensae. Non possum dicere nihil perdere, sed quid perdam et quare et quemadmodum dicam; causas paupertatis meae reddam. Sed evenit mihi quod plerisque non suo vitio ad inopiam redactis: omnes ignoscunt, nemo succurrit. Quid ergo est? non puto pauperem cui quantulumcumque superest sat est; tu tamen malo serves tua, et bono tempore incipies. Nam ut visum est maioribus nostris, 'sera parsimonia in fundo est'; non enim tantum minimum in imo sed pessimum remanet. Vale.
+    </p>
+</div>
+
+<!--
+<div style="position: fixed; display: block; width: 200px; top: 0; left: 0; right: 0; margin-right: auto; margin-left: auto; border: 2px solid goldenrod; border-radius: 25px; padding: 20px; background-color: white;">
+    <h2 style="text-align: center;">WebAI!</h2>
+    <p>Quick 30 seconds to contribute to privacy and Artificial Intelligence! Thank you very much</p>
+    <div style="width: 100%; cursor: pointer;" onclick="window.open('http://10.0.0.231:8080/pages/questionnaire.html', '_blank')">
+        <p id="webai_button" onmouseenter="document.getElementById('webai_button').style.backgroundColor = '#f2f2f2';"
+            onmouseleave="document.getElementById('webai_button').style.backgroundColor = 'white';"
+                style="text-align: center; margin: auto; padding: 20px; border-radius: 25px; border: 1px solid goldenrod;">Improve WebAI</p>
+    </div>
+</div>-->
+
+</body>
+
+<script src="/friend/webai_0_0_1.js"></script>
+
+</html>

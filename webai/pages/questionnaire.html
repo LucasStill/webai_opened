@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebAI Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<link rel="stylesheet" href="../assets/css/questionnaire.css">
+
+<body>
+
+
+<div class="questionnaire_wrapper">
+
+    <div class="header_titles">
+        <h1>WebAI Questionnaire</h1>
+        <h2>Take 30 seconds to make research and privacy move forward from the site you have just visited</h2>
+    </div>
+
+    <div class="question_card">
+        <p>You are a</p>
+        <div>
+            <input type="radio" id="gender1" name="gender" value="Woman">
+            <label class="question" for="gender1">Woman</label>
+        </div>
+        <div>
+            <input type="radio" id="gender2" name="gender" value="Man">
+            <label class="question" for="gender2">Man</label>
+        </div>
+        <div>
+            <input type="radio" id="gender3" name="gender" value="Other">
+            <label class="question" for="gender3">Other</label>
+        </div>
+    </div>
+
+    <div class="question_card">
+        <p>Your age category is</p>
+        <div>
+            <input type="radio" id="age1" name="age" value="<18">
+            <label class="question" for="age1"><18</label>
+        </div>
+        <div>
+            <input type="radio" id="age2" name="age" value="18-23">
+            <label class="question" for="age2">18-23</label>
+        </div>
+        <div>
+            <input type="radio" id="age3" name="age" value="24-29">
+            <label class="question" for="age3">24-29</label>
+        </div>
+        <div>
+            <input type="radio" id="age4" name="age" value="30-39">
+            <label class="question" for="age4">30-39</label>
+        </div>
+        <div>
+            <input type="radio" id="age5" name="age" value="40-49">
+            <label class="question" for="age5">40-49</label>
+        </div>
+        <div>
+            <input type="radio" id="age6" name="age" value="50-59">
+            <label class="question" for="age6">50-59</label>
+        </div>
+        <div>
+            <input type="radio" id="age7" name="age" value="60-69">
+            <label class="question" for="age7">60-69</label>
+        </div>
+        <div>
+            <input type="radio" id="age8" name="age" value="70+">
+            <label class="question" for="age8">70+</label>
+        </div>
+    </div>
+
+    <div class="question_card">
+        <p>You are</p>
+        <div>
+            <input type="radio" id="hand1" name="hand" value="Right Handed">
+            <label class="question" for="hand1">Right Handed</label>
+        </div>
+        <div>
+            <input type="radio" id="hand2" name="hand" value="Left Handed">
+            <label class="question" for="hand2">Left Handed</label>
+        </div>
+    </div>
+
+    <!--<div class="question_card">
+        <p>On a scale from 1 to 5, what is your anxiety level</p>
+        <label for="anxiety_range" id="anxiety_label_range">Anxiety Level: </label>
+        <div class="range_div">
+            <p class="left_index">Relaxed</p>
+            <input class="slider" type="range" id="anxiety_range" name="anxiety_range" min="1" max="50">
+            <p class="right_index">Stressed</p>
+        </div>
+    </div>-->
+
+    <!--<div class="question_card">
+        <p>On a scale from 1 to 5, your anxiety level is:</p>
+        <div class="range_grid">
+            <p class="range_label" style="text-align: left">Relaxed</p>
+            <div>
+                <label class="question" for="anxiety1">1</label>
+                <div>
+                    <input type="radio" id="anxiety1" name="anxiety" value="1">
+                </div>
+            </div>
+            <div>
+                <label class="question" for="anxiety2">2</label>
+                <div>
+                    <input type="radio" id="anxiety2" name="anxiety" value="2">
+                </div>
+            </div>
+            <div>
+                <label class="question" for="anxiety3">3</label>
+                <div style="margin: auto;">
+                    <input type="radio" id="anxiety3" name="anxiety" value="3">
+                </div>
+            </div>
+            <div>
+                <label class="question" for="anxiety4">4</label>
+                <div style="margin: auto;">
+                    <input type="radio" id="anxiety4" name="anxiety" value="4">
+                </div>
+            </div>
+            <div>
+                <label class="question" for="anxiety5">5</label>
+                <div style="margin: auto;">
+                    <input type="radio" id="anxiety5" name="anxiety" value="5">
+                </div>
+            </div>
+            <p class="range_label" style="text-align: right">Stressed</p>
+        </div>
+    </div>-->
+
+    <div class="question_card">
+        <p>On a scale from 1 to 5, your anxiety level is:</p>
+        <div class="range_grid" style="grid-column-gap: 5px;">
+            <p class="range_label" style="text-align: left">Relaxed</p>
+            <div class="shape_answer">
+                <div class="shape_answer-1" onclick="select_range('anxiety', 1)" id="anxiety_shape1">
+                    <label class="question" for="anxiety1">1</label>
+                    <input type="radio" id="anxiety1" name="anxiety" value="1">
+                </div>
+            </div>
+            <div class="shape_answer">
+                <div class="shape_answer-2" onclick="select_range('anxiety', 2)" id="anxiety_shape2">
+                    <label class="question" for="anxiety2">2</label>
+                    <input type="radio" id="anxiety2" name="anxiety" value="2">
+                </div>
+            </div>
+            <div class="shape_answer">
+                <div class="shape_answer-3" onclick="select_range('anxiety', 3)" id="anxiety_shape3">
+                    <label class="question" for="anxiety3">3</label>
+                    <input type="radio" id="anxiety3" name="anxiety" value="3" checked="checked">
+                </div>
+            </div>
+            <div class="shape_answer">
+                <div class="shape_answer-4" onclick="select_range('anxiety', 4)" id="anxiety_shape4">
+                    <label class="question" for="anxiety4">4</label>
+                    <input type="radio" id="anxiety4" name="anxiety" value="4">
+                </div>
+            </div>
+            <div class="shape_answer">
+                <div class="shape_answer5" onclick="select_range('anxiety', 5)" id="anxiety_shape5">
+                <label class="question" for="anxiety5">5</label>
+                    <input type="radio" id="anxiety5" name="anxiety" value="5">
+                </div>
+            </div>
+            <p class="range_label" style="text-align: right">Stressed</p>
+        </div>
+    </div>
+
+
+    <div class="question_card">
+        <p>On a scale from 1 to 5, your awareness level is:</p>
+        <div class="range_grid" style="grid-column-gap: 5px;">
+            <p class="range_label" style="text-align: left">Sleepy</p>
+            <div class="shape_answer">
+                <div class="shape_answer-1" onclick="select_range('awareness', 1)" id="awareness_shape1">
+                    <label class="question" for="awareness1">1</label>
+                    <input type="radio" id="awareness1" name="awareness" value="1">
+                </div>
+            </div>
+            <div class="shape_answer">
+                <div class="shape_answer-2" onclick="select_range('awareness', 2)" id="awareness_shape2">
+                    <label class="question" for="awareness2">2</label>
+                    <input type="radio" id="awareness2" name="awareness" value="2">
+                </div>
+            </div>
+            <div class="shape_answer">
+                <div class="shape_answer-3" onclick="select_range('awareness', 3)" id="awareness_shape3">
+                    <label class="question" for="awareness3">3</label>
+                    <input type="radio" id="awareness3" name="awareness" value="3" checked="checked">
+                </div>
+            </div>
+            <div class="shape_answer">
+                <div class="shape_answer-4" onclick="select_range('awareness', 4)" id="awareness_shape4">
+                    <label class="question" for="awareness4">4</label>
+                    <input type="radio" id="awareness4" name="awareness" value="4">
+                </div>
+            </div>
+            <div class="shape_answer">
+                <div class="shape_answer5" onclick="select_range('awareness', 5)" id="awareness_shape5">
+                    <label class="question" for="awareness5">5</label>
+                    <input type="radio" id="awareness5" name="awareness" value="5">
+                </div>
+            </div>
+            <p class="range_label" style="text-align: right">Very Aware</p>
+        </div>
+    </div>
+
+
+    <div class="question_card">
+        <p>Did you feel a significant level of frustration from the previous website?</p>
+        <div>
+            <input type="radio" id="frustration1" name="frustration" value="Yes">
+            <label class="question" for="frustration1">Yes</label>
+        </div>
+        <div>
+            <input type="radio" id="frustration2" name="frustration" value="No">
+            <label class="question" for="frustration2">No</label>
+        </div>
+        <div>
+            <input type="radio" id="frustration3" name="frustration" value="Maybe">
+            <label class="question" for="frustration3">Maybe</label>
+        </div>
+    </div>
+
+    <div class="question_card">
+        <p>Did you feel a significant level of happiness from the previous website?</p>
+        <div>
+            <input type="radio" id="happiness1" name="happiness" value="Yes">
+            <label class="question" for="happiness1">Yes</label>
+        </div>
+        <div>
+            <input type="radio" id="happiness2" name="happiness" value="No">
+            <label class="question" for="happiness2">No</label>
+        </div>
+        <div>
+            <input type="radio" id="happiness3" name="happiness" value="Maybe">
+            <label class="question" for="happiness3">Maybe</label>
+        </div>
+    </div>
+
+    <button class="submit_button" onclick="submit_questionnaire()">Validate</button>
+
+
+</div>
+
+<script>
+    /*var slider = document.getElementById("anxiety_range");
+    var output = document.getElementById("anxiety_label_range");
+    output.innerHTML = slider.value + ": Neutral";
+
+    slider.oninput = function() {
+        console.log(this.value);
+        if(this.value <= 10) {
+            output.innerHTML = this.value + ": Very relaxed";
+        } else if(this.value <= 20) {
+            output.innerHTML = this.value + ": Relaxed";
+        } else if(this.value <= 30) {
+            output.innerHTML = this.value + ": Neutral";
+        } else if(this.value <= 40) {
+            output.innerHTML = this.value + ": Stressed";
+        } else if(this.value <= 50) {
+            output.innerHTML = this.value + ": Very stressed";
+        }
+    }*/
+
+    let WEBAI_URL = "https://webai.ai";
+    let WEBAI_UUID = "";
+    let SESSION_UUID = 0;
+
+    let url_parts = window.location.href.split("&");
+    if(url_parts.length <= 1) {
+        // Problem because there are no webai session uuids found
+        console.log("Could not find session token");
+        SESSION_UUID = -1;
+    } else {
+        SESSION_UUID = url_parts[1];
+        console.log("SESSION_UUID: " + SESSION_UUID);
+    }
+
+
+
+    window.onload = local_storage_info;
+
+    function local_storage_info() {
+        console.log("local storage info: ");
+
+        let webai_uuid = localStorage.getItem("webai_uuid");
+        if(webai_uuid === null) {
+            // Create webai_uuid
+            console.log("creating webai_uuid");
+            WEBAI_UUID = ""; // Sets default to empty string
+
+        } else {
+            // webai_uuid already exists, so communicate with database that one has been found
+            // todo: implement some checks to ensure that this is not any kind of malicious intent and that the ID is real
+            // the unique webai uuid must be a very long string in order to be fully secured.
+            console.log("found webai_uuid: " + webai_uuid);
+
+            // Found so change value
+            WEBAI_UUID = webai_uuid;
+        }
+
+    }
+
+
+    function select_range(shape, id) {
+        for(let i=1; i<=5; i++) {
+            document.getElementById(shape + "_shape" + i).style.border = "none";
+        }
+        document.getElementById(shape + "_shape" + id).style.border = "1px solid goldenrod";
+        document.getElementById(shape + id).checked = true;
+        console.log(document.getElementById(shape + id).checked);
+    }
+
+
+    let QUESTIONNAIRE_FIELDS = ['gender', 'age', 'hand', 'anxiety', 'awareness', 'frustration', 'happiness'];
+
+
+    function submit_questionnaire() {
+
+        let dict = {
+            'webai_uuid': WEBAI_UUID,
+            'session_uuid': SESSION_UUID,
+        };
+
+        for(let i=0; i<QUESTIONNAIRE_FIELDS.length; i++) {
+            console.log(QUESTIONNAIRE_FIELDS[i]);
+            let answer = document.querySelector('input[name=' + QUESTIONNAIRE_FIELDS[i] + ']:checked');
+            if(answer == null) {
+                alert("Please select a " + QUESTIONNAIRE_FIELDS[i] + " response");
+                return
+            }
+            dict[QUESTIONNAIRE_FIELDS[i]] = answer.value;
+        }
+
+        let payload = JSON.stringify(dict);
+        console.log(payload);
+
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {if (xhr.readyState === 4) {if (xhr.status === 200) {
+            let data = xhr.responseText;
+            console.log('Thank you! Sent packet, response: ' + data);
+            location.replace(WEBAI_URL);
+        }}}
+
+        // Change target address with WebAI's domain
+        xhr.open("POST", WEBAI_URL + "/send_questionnaire", true);
+        xhr.setRequestHeader('Content-type', 'application/json');
+        xhr.send(payload);
+    }
+
+</script>
+
+</body>
+</html>

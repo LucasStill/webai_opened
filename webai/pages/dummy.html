@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dummy</title>
+
+    <link rel="stylesheet" href="../assets/css/landing.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+</head>
+<body>
+
+<div class="main_header">
+
+    <div style="position: relative; right: 0; margin-left: auto; margin-top: 200px; overflow-x: hidden">
+        <img class="top_shape" src="../assets/images/wire_webai.png">
+    </div>
+    
+    <!--
+    <div style="position: relative; right: 0; margin-left: auto; margin-top: 200px;">
+        <canvas class="top_shape" id="canvas3d" data-engine="three.js r142" width="500" height="500" ></canvas>
+    </div>-->
+</div>
+
+</body>
+
+<script>
+    add_scripts()
+    function add_scripts() {
+        let runtime_script = document.createElement("link");
+        runtime_script.rel = "modulepreload";
+        runtime_script.href = "https://unpkg.com/@splinetool/runtime@0.9.176/build/runtime.js";
+        document.getElementsByTagName("body")[0].appendChild(runtime_script);
+
+    }
+</script>
+
+<script src="../assets/scripts/anim_script2.js" type="module"></script>
+
+
+</html>

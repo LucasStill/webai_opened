@@ -1,0 +1,29 @@
+[package]
+name = "webai"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gotham = "0.6.0"
+markup = "0.12.5"
+mime = "0.3.16"
+clap = "2.33.3"
+futures = "0.3.21"
+futures-util = "0.3.14"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.87"
+time = { version = "0.3.0", features = ["formatting", "local-offset"] }
+gotham_derive = "0.7.0"
+chrono = "0.4.19"
+rand = "0.8.1"
+tokio = { version = "1.23.0", features = ["full"] }
+reqwest = "0.11.13"
+scraper = "0.14.0"
+markup5ever = "0.11.0"
+sqlx = { version = "0.6", features = [  "runtime-async-std-native-tls", "postgres", "uuid" ] }
+tracing = "0.1"
+tracing-core = "0.1.20"
+tracing-subscriber = {version="0.3", features = ["std", "env-filter"]}
+tracing-appender = "0.2"

@@ -1,0 +1,230 @@
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../fonts/Montserrat/static/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Black";
+    src: url("../fonts/Montserrat/static/Montserrat-Black.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url("../fonts/Montserrat/static/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-ExtraLight";
+    src: url("../fonts/Montserrat/static/Montserrat-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Thin";
+    src: url("../fonts/Montserrat/static/Montserrat-Thin.ttf");
+}
+
+
+body {
+    margin: 0;
+    font-family: "Montserrat-Light";
+    display: flex;
+}
+
+.questionnaire_wrapper {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.questionnaire_wrapper .header_titles {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.question_card {
+    margin-bottom: 10px;
+    border-bottom: 1px solid goldenrod;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+.question_card p {
+    font-family: Montserrat-Medium;
+}
+
+.question_card label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.question_card div {
+    margin-bottom: 2px;
+}
+
+/* Range slide styles */
+.question_card .range_div {
+    width: 100%;
+    display: flex;
+}
+
+.range_div input {
+    width: 100%;
+    cursor: pointer;
+}
+
+div input {
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 15px;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 35px;
+    width: 25px;
+    background: white !important;
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 35px;
+    width: 25px;
+    background: white !important;
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+.range_div .left_index, .right_index {
+    width: 150px;
+}
+
+.range_div .left_index {
+    text-align: left;
+}
+
+.range_div .right_index {
+    text-align: right;
+}
+
+
+/* Range radio styles */
+.range_grid {
+    display: grid;
+    grid-template-areas: "0 1 2 3 4 5 6";
+    text-align: center;
+}
+
+.range_grid div {
+    display: block;
+    text-align: center;
+}
+
+.range_grid p.range_label {
+    display: block;
+    width: 100%;
+}
+
+.range_grid div {
+    display: block;
+}
+
+.range_grid div label, .range_grid div input {
+    width: 100%;
+    margin: auto;
+    position: center;
+    text-align: center;
+}
+
+.range_grid div input {
+    width: 15px;
+    position: center;
+    margin: unset;
+}
+
+
+/* Shape grid range */
+.shape_answer div {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@media not (pointer:coarse) {
+    .shape_answer div:hover {
+        background-color: #f2f2f2;
+    }
+}
+
+.shape_answer-3 {
+    border: 1px solid goldenrod;
+}
+
+.shape_answer div input {
+    display: none;
+}
+
+.submit_button {
+    margin: auto;
+    margin-top: 25px;
+    width: 200px;
+    border: 1px solid gray;
+    background-color: dodgerblue;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    font-family: Montserrat-Medium;
+    color: white;
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.submit_button:hover {
+    background-color: #0080ff;
+}
+
+@media screen and (max-width: 400px) {
+
+    .question_card {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .range_div .left_index {
+        width: 50%;
+    }
+
+    .range_div .right_index {
+        width: 50%;
+    }
+
+    .range_div input {
+        margin-top: 50px;
+        position: absolute;
+        width: 80%;
+        left: 0;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
